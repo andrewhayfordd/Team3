@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Login{
+   display: flex;
+}
+
+.img img{
+    height: 470px;
+    width: 600px;
+    position: relative;
+    left: 650px;
+    top: 80px;
+}
+.open{
+    display: flex;
+}
+.container > .login_side{
+    position: fixed;
+    width: 550px;
+    background-color: rgb(140, 0, 255);
+    height: 100%;
+}
+.container > .login_side .side{
+    margin-top: 120px;
+}
+.container > .login_side .side .head{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    margin: 40px;
+}
+.container > .login_side .side .login{
+    margin-left: 110px;
+}
+.container > .login_side .side .login form input{
+    padding: 10px;
+    height: 18px;
+    width: 290px;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+.container > .login_side .side .login form button{
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-size: 19px;
+    background-color: rgba(76, 2, 136, 0.795);
+    color: #fff;
+    cursor: pointer;
+}
+.container > .login_side .side .login form #signup{
+    color: rgb(36, 1, 65);
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.signup{
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    transition: all 0.8s ease;
+    transform: scale(0);
+    z-index: 2000;
+}
+.popover{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.popover.overlay{
+    display: flex;
+}
+.signup.popup{
+    transform: scale(1);
+}
+.signup form input{
+    padding: 10px;
+    height: 18px;
+    width: 290px;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: solid #838383 2px;
+}
+.signup form button{
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-size: 19px;
+    background-color: rgba(76, 2, 136, 0.795);
+    color: #fff;
+    cursor: pointer;
+}
