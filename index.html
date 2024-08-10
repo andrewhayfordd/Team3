@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google chart link-->
+    <script 
+        type="text/javascript" 
+        src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    
 </head>
 <body>
+    <div class="wrapper">
+        <nav>
+        <div class="navbar">
+            
+                <a href="#"><i class="fas fa-home"></i>Home</a>
+                <a href="#"><i class="fas fa-user"></i>Profile</a>
+                <a href="#"><i class="fas fa-list-check"></i>Task</a>
+                <a href="#"><i class="fas fa-inbox"></i>Inbox</a>
+                <a href="#"><i class="fas fa-calendar-days"></i>Planned</a>
+                <a href="#"><i class="fas fa-gear"></i>Settings</a>
+                <a href="#"><i class="fas fa-bell"></i>Notification</a>
+                <a href="#"><i class="fas fa-comment"></i>Report</a>
 
-    <h1>Dashboard</h1>
-    <button type="submit" onclick="logout()">LogOut</button>
+                <a href="" class="logout">
+                    <i class="fas fa-sign-out"><button type="submit" onclick="logout()">LogOut</button></i>
+                </a>
+        </div>
+        </nav>
+
+        <div class="main-body">
+            <div class="header">
+                <span>Welcome to back.</span>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="head-search">
+                <input type="search" placeholder="search">
+            </div>
+            <div class="graphBox">
+                <div id="columnchart_material" style="width: 800px; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
     
     <script src="./main.js"></script>
+    <script src="chart.js"></script>
 </body>
 </html>
