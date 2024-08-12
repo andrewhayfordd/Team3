@@ -2,6 +2,7 @@ let local = localStorage;
 
         function register(){
             let Rusername = document.getElementById("Rusername").value;
+            let Remail = document.getElementById("Remail").value;
             let Rpassword = document.getElementById("Rpassword").value;
 
             let registeredData = {
