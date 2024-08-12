@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'login.html';
     }
   });
+
   function logout(){
     local.removeItem("loginData");
     window.location.assign("login.html")
