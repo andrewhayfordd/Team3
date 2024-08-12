@@ -45,7 +45,7 @@
     border: none;
 }
 .container > .login_side .side .login form button{
-    margin-top: 30px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     padding: 6px 20px;
@@ -53,11 +53,19 @@
     background-color: rgba(76, 2, 136, 0.795);
     color: #fff;
     cursor: pointer;
+    width: 310px;
 }
-.container > .login_side .side .login form #signup{
-    color: rgb(36, 1, 65);
-    background-color: transparent;
-    font-size: 15px;
+.container > .login_side .side .login form p{
+    color: #fff;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.container > .login_side .side .login form p a{
+    color: rgb(0, 0, 94);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .signup{
@@ -65,12 +73,17 @@
     background-color: #fff;
     position: absolute;
     border-radius: 10px;
-    top: 30%;
-    left: 40%;
+    top: 27%;
+    left: 37%;
     transform: translate(-50%, -50%);
     transition: all 0.8s ease;
-    transform: scale(0);
+    transform: scale(0.5);
+    opacity: 0;
     z-index: 2000;
+}
+.signup > h2{
+    font-family: sans-serif;
+    text-align: center;
 }
 .popover{
     display: none;
@@ -88,23 +101,38 @@
 }
 .signup.popup{
     transform: scale(1);
+    opacity: 1;
 }
 .signup form input{
     padding: 10px;
     height: 18px;
     width: 290px;
-    margin-top: 20px;
+    margin-top: 10px;
     outline: none;
     border-radius: 5px;
-    border: solid #838383 2px;
+    border: solid #c4c4c4 1px;
 }
 .signup form button{
-    margin-top: 30px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     padding: 6px 20px;
     font-size: 19px;
-    background-color: rgba(76, 2, 136, 0.795);
+    background-color: rgba(0, 4, 216, 0.795);
     color: #fff;
+    cursor: pointer;
+    width: 310px;
+}
+.signup form p{
+    color: #000000;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.signup form p a{
+    color: rgb(0, 0, 211);
+    text-decoration: none;
     cursor: pointer;
 }

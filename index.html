@@ -35,34 +35,62 @@
         <nav>
         <div class="navbar">
             
-                <a href="#"><i class="fas fa-home"></i>Home</a>
-                <a href="#"><i class="fas fa-user"></i>Profile</a>
-                <a href="#"><i class="fas fa-list-check"></i>Task</a>
-                <a href="#"><i class="fas fa-inbox"></i>Inbox</a>
+                <a href="#" data-content="dashboard"><i class="fas fa-home"></i>Home</a>
+                <a href="#" data-content="profile"><i class="fas fa-user"></i>Profile</a>
+                <a href="#" data-content="settings"><i class="fas fa-list-check"></i>Task</a>
+                <a href="#" data-content="inbox"><i class="fas fa-inbox"></i>Inbox</a>
                 <a href="#"><i class="fas fa-calendar-days"></i>Planned</a>
                 <a href="#"><i class="fas fa-gear"></i>Settings</a>
                 <a href="#"><i class="fas fa-bell"></i>Notification</a>
                 <a href="#"><i class="fas fa-comment"></i>Report</a>
 
-                <a href="" class="logout">
-                    <i class="fas fa-sign-out"><button type="button" onclick="logout()">LogOut</button></i>
+                <a href="" class="logout" onclick="logout()">
+                    <i class="fas fa-sign-out"><button type="button">LogOut</button></i>
                 </a>
         </div>
         </nav>
 
         <div class="main-body">
+
             <div class="header">
-                <span>Welcome to back.</span>
-                <h1>Dashboar</h1>
+                <div class="title">
+                    
+                    <h1>Finglee</h1>
+                </div>
+
+                <div class="head-search">
+                    <input type="search" placeholder="search">
+                </div>
             </div>
-            <div class="head-search">
-                <input type="search" placeholder="search">
+            
+
+
+
+            <div class="main-content">
+                <div id="dashboard" class="content active">
+                    <div id="columnchart_material" style="width: 800px; height: 300px;"></div>
+                </div>
+
+                <div id="profile" class="content">
+                    <h1>Profile</h1>
+                    <p>Welcome to your profile.</p>
+                </div>
+
+                <div id="settings" class="content">
+                    <h1>Task</h1>
+                    <p>This is your task.</p>
+                </div>
+
+                <div id="inbox" class="content">
+                    <iframe src="inbox.html" frameborder="0"></iframe>
+                </div>
             </div>
-            <div class="graphBox">
-                <div id="columnchart_material" style="width: 800px; height: 300px;"></div>
-            </div>
+
+
         </div>
     </div>
+
+    
     
     <script src="./main.js"></script>
     <script src="chart.js"></script>

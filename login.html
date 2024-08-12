@@ -31,8 +31,8 @@
                     <form action="" >
                         <input id="username" type="text" placeholder="Username" required/><br />
                         <input id="password" type="password" placeholder="Password" required/><br/>
-                        <button type="button" onclick="submitForm()">Login</button>
-                        <button id="signup"  type="button" onclick="signUp()">register</button>
+                        <button type="button" onclick="submitForm()">Login</button><br/>
+                        <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
                     </form>
                 </div>
                 
@@ -46,12 +46,14 @@
     <div class="popover" id="popover" onclick='closee()'>
     </div>
     <div class="signup" id="signups">
-        <h2>Register</h2>
+        <h2>Sign Up</h2>
 
         <form action="" onsubmit="register()" >
             <input id="Rusername" type="text" placeholder="Username" required/><br />
+            <input id="Remail" type="email" placeholder="Email" required/><br/>
             <input id="Rpassword" type="password" placeholder="Password" required/><br/>
-            <button type="button" onclick="register()">Register</button>
+            <button type="button" onclick="register()">Sign up</button>
+            <p>Don't have an account? <a onclick="closee()">Login</a></p>
         </form>
 
     </div>
