@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+
+    <div class="body">
+
+
+    <div class="container">
+        <h1>CRUD Table</h1>
+        <form id="crudForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="tel" id="phone" placeholder="Phone number" required>
+            <input type="text" id="school" placeholder="School" required>
+            <button type="submit">Add</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>School</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+    <script>
+        // Get form and table elements
+const form = document.getElementById('crudForm');
+const tableBody = document.getElementById('tableBody');
+
+// Initialize data array from localStorage or an empty array
+let data = JSON.parse(localStorage.getItem('crudData')) || [];
+
+// Function to render the table
+function renderTable() {
+    tableBody.innerHTML = '';
+    data.forEach((item, index) => {
+        const row = `
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.age}</td>
+                <td>${item.phone}</td>
+                <td>${item.school}</td>
+                <td>
+                    <button class="edit" onclick="editRow(${index})">Edit</button>
+                    <button class="delete" onclick="deleteRow(${index})">Delete</button>
+                </td>
+            </tr>
+        `;
+        tableBody.insertAdjacentHTML('beforeend', row);
+    });
+}
+
+// Function to save data to localStorage
+function saveData() {
+    localStorage.setItem('crudData', JSON.stringify(data));
+}
+
+// Function to add a new row
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const phone = document.getElementById('phone').value;
+    const school = document.getElementById('school').value;
+
+    data.push({ name, age, phone, school });
+    saveData();
+    renderTable();
+    form.reset();
+});
+
+// Function to delete a row
+function deleteRow(index) {
+    data.splice(index, 1);
+    saveData();
+    renderTable();
+}
+
+// Function to edit a row
+function editRow(index) {
+    const name = prompt('Enter new name:', data[index].name);
+    const age = prompt('Enter new age:', data[index].age);
+    const phone = prompt('Enter new phone Number:', data[index].phone)
+    const school = prompt('Enter new school:', data[index].school);
+
+    if (name !== null && age !== null) {
+        data[index].name = name;
+        data[index].age = age;
+        data[index].phone = phone;
+        data[index].school = school;
+        saveData();
+        renderTable();
+    }
+}
+
+// Initial render
+renderTable();
+
+    </script>
+
+</body>
+</html>
